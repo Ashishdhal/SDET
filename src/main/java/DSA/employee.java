@@ -5,7 +5,7 @@ public class employee {
 	private String name;
 	private int age;
 
-	public void employee(String name, int age) {
+	public employee(String name, int age) {
 		
 		//System.out.println("["+name+"]"+","+"["+age+"]");
 		this.name=name;
