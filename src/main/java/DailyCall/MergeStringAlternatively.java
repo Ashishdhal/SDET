@@ -43,7 +43,7 @@ public class MergeStringAlternatively {
 	}
 	
 	System.out.println(mergeString);
-	mergeString=mergeString+word2.substring(lengthWord1, word2.length());
+	mergeString=mergeString+word2.substring(word2.length(), word2.length());
 	//System.out.println(mergeString);
 	
 	
