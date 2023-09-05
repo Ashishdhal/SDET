@@ -17,7 +17,7 @@ public class Account_TC02_EditAccount {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.findElement(By.id("username")).sendKeys("ashish@testleaf.com");
-		driver.findElement(By.id("password")).sendKeys("Profile123#");
+		driver.findElement(By.id("password")).sendKeys("Learning123#");
 		driver.findElement(By.id("Login")).click();
 		driver.findElement(By.xpath("//div[@class='slds-icon-waffle']")).click();
 		driver.findElement(By.xpath("(//button[@class='slds-button'])[2]")).click();
