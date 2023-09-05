@@ -51,8 +51,10 @@ public class Account_TC01_CreateAccounts {
 
 //driver.findElement(By.xpath("(//button[contains(@class,'slds-combobox__input slds-input_faux')])[3]")).click();
 //	driver.findElement(By.xpath("//button[@data-position-id='lgcp-1000040']//span[1]")).click();
-	driver.findElement(By.xpath("(//button[@data-value='--None--']//span)[3]")).click();
 	
+	
+	WebElement ele = driver.findElement(By.xpath("(//button[@data-value='--None--']//span)[3]"));
+	driver.executeScript("arguments[0].click();", ele);
 	Thread.sleep(4000);
 	//driver.findElement(By.xpath("(//span[@class='slds-media__body'])[2]")).click();
 	//driver.findElement(By.xpath("(//span[@class='slds-media__body'])[6]")).click();
