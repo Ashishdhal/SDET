@@ -1,5 +1,6 @@
 package DSA;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 import org.junit.Test;
@@ -34,6 +35,7 @@ public class HW_2114_max_word {
 			 
 			
 		}
+		 Arrays.sort(a);
 		// for
 		 
 		return a[a.length-1];
