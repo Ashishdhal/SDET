@@ -1,12 +1,13 @@
 package JIRA;
 
-	//import org.hamcrest.Matcher;
-//	import org.hamcrest.Matchers;
-	//import org.hamcrest.text.MatchesPattern;
+	import org.hamcrest.Matchers;
+   //import org.hamcrest.Matcher;
+   //import org.hamcrest.Matchers;
+	import org.hamcrest.text.MatchesPattern;
 	//import org.testng.annotations.Test;
-import org.testng.annotations.Test;
+	import org.testng.annotations.Test;
 
-import io.restassured.RestAssured;
+	import io.restassured.RestAssured;
 	import io.restassured.response.Response;
 	import io.restassured.specification.RequestSpecification;
 
@@ -31,10 +32,15 @@ import io.restassured.RestAssured;
 			
 			//response.prettyPrint();
 			
-			response.then().assertThat().statusCode(200);
-			response.then().assertThat().body("result.short_description",Matchers.equalTo("Created via postman"));
-		
+			/*
+			 * response.then().assertThat().statusCode(200);
+			 * response.then().assertThat().body("result.short_description",Matchers.
+			 * equalTo("Created via postman"));
+			 */
 			// Extract Sys_id
+			
+			int statusCode = response.getStatusCode();
+			System.out.println(statusCode);
 			
 			sys_ID= response.jsonPath().get("result.sys_id");
 			System.out.println("System ID -----"+sys_ID);

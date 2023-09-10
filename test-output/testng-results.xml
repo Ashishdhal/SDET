@@ -1,28 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-16T15:55:57 IST" name="Default suite" finished-at="2023-08-16T15:55:57 IST" duration-ms="825">
+  <suite started-at="2023-09-10T14:53:31 IST" name="Default suite" finished-at="2023-09-10T14:53:39 IST" duration-ms="8251">
     <groups>
     </groups>
-    <test started-at="2023-08-16T15:55:57 IST" name="Default test" finished-at="2023-08-16T15:55:57 IST" duration-ms="825">
+    <test started-at="2023-09-10T14:53:31 IST" name="Default test" finished-at="2023-09-10T14:53:39 IST" duration-ms="8251">
       <class name="JIRA.CreateIncident">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:JIRA.CreateIncident@1a4013]" started-at="2023-08-16T15:55:57 IST" name="setUp" finished-at="2023-08-16T15:55:57 IST" duration-ms="753" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:JIRA.CreateIncident@272113c4]" started-at="2023-09-10T14:53:31 IST" name="setUp" finished-at="2023-09-10T14:53:32 IST" duration-ms="544" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="create()[pri:0, instance:JIRA.CreateIncident@1a4013]" started-at="2023-08-16T15:55:57 IST" name="create" finished-at="2023-08-16T15:55:57 IST" duration-ms="8" status="FAIL">
-          <exception class="java.lang.Error">
+        <test-method signature="create()[pri:0, instance:JIRA.CreateIncident@272113c4]" started-at="2023-09-10T14:53:32 IST" name="create" finished-at="2023-09-10T14:53:39 IST" duration-ms="7605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create -->
+      </class> <!-- JIRA.CreateIncident -->
+      <class name="JIRA.UpdateIncident">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:JIRA.UpdateIncident@644baf4a]" started-at="2023-09-10T14:53:39 IST" name="setUp" finished-at="2023-09-10T14:53:39 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="update()[pri:0, instance:JIRA.UpdateIncident@644baf4a]" started-at="2023-09-10T14:53:39 IST" name="update" finished-at="2023-09-10T14:53:39 IST" depends-on-methods="JIRA.CreateIncident.create" duration-ms="46" status="FAIL">
+          <exception class="java.io.FileNotFoundException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-Matchers cannot be resolved
-]]>
+              <![CDATA[.\src\test\resources\updateIncident.json (The system cannot find the file specified)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-Matchers cannot be resolved
-
-at JIRA.CreateIncident.create(CreateIncident.java:35)
+              <![CDATA[java.io.FileNotFoundException: .\src\test\resources\updateIncident.json (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at org.codehaus.groovy.runtime.ResourceGroovyMethods.newReader(ResourceGroovyMethods.java:1835)
+at org.codehaus.groovy.runtime.ResourceGroovyMethods.getText(ResourceGroovyMethods.java:580)
+at org.codehaus.groovy.runtime.dgm$1086.invoke(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:253)
+at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:57)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.internal.support.FileReader.readToString(FileReader.groovy:23)
+at io.restassured.internal.http.EncoderRegistry.toString(EncoderRegistry.java:461)
+at io.restassured.internal.http.EncoderRegistry.encodeJSON(EncoderRegistry.java:287)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethodClosure(MetaClassImpl.java:1022)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1243)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.Closure.call(Closure.java:418)
+at io.restassured.internal.http.HTTPBuilder$RequestConfigDelegate.setBody(HTTPBuilder.java:1134)
+at io.restassured.internal.http.HTTPBuilder$RequestConfigDelegate.setBody(HTTPBuilder.java:1116)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.setProperty(MetaClassImpl.java:2924)
+at groovy.lang.MetaClassImpl.setProperty(MetaClassImpl.java:3922)
+at org.codehaus.groovy.runtime.InvokerHelper.setProperty(InvokerHelper.java:192)
+at groovy.lang.Closure.setPropertyTryThese(Closure.java:383)
+at groovy.lang.Closure.setPropertyDelegateFirst(Closure.java:373)
+at groovy.lang.Closure.setProperty(Closure.java:354)
+at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.setGroovyObjectProperty(ScriptBytecodeAdapter.java:550)
+at io.restassured.internal.RequestSpecificationImpl$_sendHttpRequest_closure27.doCall(RequestSpecificationImpl.groovy:1474)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.Closure.call(Closure.java:418)
+at groovy.lang.Closure.call(Closure.java:434)
+at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:494)
+at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+at io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1466)
+at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1215)
+at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.FilterContext$next.call(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1686)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1692)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1369)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:184)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+at JIRA.UpdateIncident.update(UpdateIncident.java:27)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,11 +197,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create -->
-      </class> <!-- JIRA.CreateIncident -->
+        </test-method> <!-- update -->
+      </class> <!-- JIRA.UpdateIncident -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

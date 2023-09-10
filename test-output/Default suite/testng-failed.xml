@@ -3,6 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="JIRA.UpdateIncident">
+        <methods>
+          <include name="update"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- JIRA.UpdateIncident -->
       <class name="JIRA.CreateIncident">
         <methods>
           <include name="create"/>

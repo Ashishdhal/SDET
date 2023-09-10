@@ -8,7 +8,7 @@ package JIRA;
 
 	public class DeleteIncident extends BaseClass {
 
-		@Test(dependsOnMethods ="incidents.UpdateIncident.update") 
+		@Test(dependsOnMethods ="JIRA.UpdateIncident.update") 
 		public void delete() {
 			
 			

@@ -1,7 +1,7 @@
 	package JIRA;
 
 	import org.testng.annotations.BeforeMethod;
-
+	import org.hamcrest.Matchers;
 	import io.restassured.RestAssured;
 
 	public class BaseClass {

@@ -11,7 +11,7 @@ package JIRA;
 
 	public class UpdateIncident extends BaseClass {
 	    
-		@Test(dependsOnMethods ="incidents.CreateIncident.create")   
+		@Test(dependsOnMethods ="JIRA.CreateIncident.create")   
 		//packagename.classname.methodname
 		public void update() {
 			

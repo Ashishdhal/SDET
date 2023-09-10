@@ -18,18 +18,23 @@
 </dependency>
 
 <dependency>
-            <groupId>junit</groupId>
+    <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
          
 </dependency>
   
-  <dependency>
-<groupId>org.seleniumhq.selenium</groupId>
-<artifactId>selenium-java</artifactId>
-<version>4.11.0</version>
+ <dependency>
+	<groupId>org.seleniumhq.selenium</groupId>
+	<artifactId>selenium-java</artifactId>
+	<version>4.11.0</version>
 </dependency>
-
+<dependency>
+			<groupId>com.github.tomakehurst</groupId>
+			<artifactId>wiremock-jre8</artifactId>
+			<version>2.35.0</version>
+		
+</dependency>
   
   </dependencies>
 </project>
