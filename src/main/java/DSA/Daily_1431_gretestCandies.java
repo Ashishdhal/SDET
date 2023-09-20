@@ -20,10 +20,10 @@ public class Daily_1431_gretestCandies {
 	@Test
 	public void test() {
 		
-		List<Boolean> kidsWithCandies = kidsWithCandies(new int[] {2,3,5,1,3}, 3);
+		int kidsWithCandies = kidsWithCandies(new int[] {2,3,5,1,3}, 3);
 		System.out.println(kidsWithCandies);
 	}
-	public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+	public int kidsWithCandies(int[] candies, int extraCandies) {
 		//boolean[] arr=new boolean[candies.length];
 		List<Boolean> ls=new ArrayList<Boolean>();
 		
@@ -36,6 +36,7 @@ public class Daily_1431_gretestCandies {
 			
 			//arr[i]=(candies[i]+extraCandies)>=gretestValue;
 			
+			int gretestValue = 0;
 			//candies[i]+extraCandies)>=gretestValue)
 			ls.add((candies[i]+extraCandies)>=gretestValue)	;
 				
@@ -44,7 +45,7 @@ public class Daily_1431_gretestCandies {
 			}
 		}
 		
-		return arr;
+		return 0;
         
     }
 

@@ -48,7 +48,7 @@ public class DSA_MOVE_ZERO_2POINTER {
 			  
 			  }
 	 
-	public int[] moveZero(int[] nums) {
+	  public int[] moveZero(int[] nums) {
 		int startIndex=0;
 		int endIndex=0;
 		int temp=0;
