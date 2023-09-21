@@ -1,4 +1,12 @@
 package DSA;
+//0. Initialize counter =0
+//1. initialize 2 pointers, 
+//sIndexG=0, sIndexS=0
+//2. sort both the arrays g,s
+//3. when the sIndex<s.length && eIndex<g.length, start comparing the index value of g and s arrays
+//3.1: when sIndexG=0, check if the s array is having indices value greater than or equal to g index value, if yes increament count, remove the s index value 
+//4. return counter 
+
 
 import java.util.Arrays;
 
