@@ -11,23 +11,23 @@ import junit.framework.Assert;
 //5. if a,b and c is present in the string, increament the count
 //6. return count 
 public class HW_1358_AllChar {
-	@Test
-	public void test() {
-		int numberOfSubstrings = numberOfSubstrings("abcabc");
-		System.out.println(numberOfSubstrings);
-		Assert.assertEquals(numberOfSubstrings, 10);
-		
-	}
-	
 //	@Test
-//	public void test1() {
-//		int numberOfSubstrings = numberOfSubstrings("aaacb");
+//	public void test() {
+//		int numberOfSubstrings = numberOfSubstrings("abcabc");
 //		System.out.println(numberOfSubstrings);
-//		Assert.assertEquals(numberOfSubstrings, 3);
+//		Assert.assertEquals(numberOfSubstrings, 10);
 //		
 //	}
 	
-	 public int numberOfSubstrings(String s) {
+	@Test
+	public void test1() {
+		int numberOfSubstrings = numberOfSubstrings("aaacb ");
+		System.out.println(numberOfSubstrings);
+		Assert.assertEquals(numberOfSubstrings, 3);
+		
+	}
+	
+	 public int numberOfSubstrings(String s) {//"aaacb"
 		 
 		 int sIndex=0;
 		 int eIndex=2;
@@ -40,13 +40,38 @@ public class HW_1358_AllChar {
 				eIndex++;
 				
 			}
+		
 			 
 			//sIndex++;
 			
-		 }
+			if(eIndex==s.length()) {
+				sIndex++;
+				eIndex=sIndex+2;
+			}
+			
+			if(eIndex!=s.length()) {
+				
+		
+				eIndex=sIndex++;
+			}
+			
 		 
-		return count;
+//		 sIndex++;
+//		 eIndex=sIndex+2;
+//		 while(eIndex==s.length()) {
+//			 	
+//			 	
+//			 	String str = s.substring(sIndex, eIndex+1);
+//				if(str.indexOf('a')!=-1&& str.indexOf('b')!=-1 &&str.indexOf('c')!=-1) {
+//					count++;
+//					eIndex++;
+//				
+//				
+//			 }
+//		 
+		
 	        
 	    }
-
+		 return count;
+}
 }
