@@ -2,12 +2,8 @@ package DSA;
 //p.code:
 //1. initialize 2 pointers p1=0 and p2=0, sumP1=0, sump2=0
 //2. traverse through player1 using pointer 1 
-//3. if not 10, add the index value to sump1
-//4. else , multiple the next indecies values with 2 and add to sump1
-					
-		
-
-
+//3. if p1==1 and player1[p1-1]==10 condition satisfied,  add the p1 index value by multiplying with 2 to sump1 and increament p1
+//4. if p1>=2 and player1[p1-1]==10||player1[p1-2]==10, add the p1 index value by multiplying with 2 to sump1 and increament p1			
 //5. repeat the step 3,4 for player2 with pointer p2
 //6. sump1>sump2: return 1
 //   sump1<sump2: return 2
