@@ -28,7 +28,7 @@ public int FindResult(int[] a) {
 			{
 				return temp;
 			}
-			temp=sum;
+			//temp=sum;
 		}
 	}
 	

@@ -29,7 +29,7 @@ public class HW_2660_Bowling_Game {
 		Assert.assertEquals(winner, 0); 
 	}
 	
-	 public int isWinner(int[] player1, int[] player2) {
+	public int isWinner(int[] player1, int[] player2) {
 		 int p1=0,p2=0,sump1=0,sump2=0;
 		 
 		 while(p1<player1.length) { //3,5,7,6
@@ -48,11 +48,6 @@ public class HW_2660_Bowling_Game {
 				 sump1=sump1+player1[p1];
 				 p1++;
 			 }
-				 
-			 
-		 }
-		 
-		 while(p2<player2.length) { //8,10,10,2
 			 
 			 if(p2==1 && player2[p2-1]==10) {
 				 sump2=sump2+player2[p2]*2;
@@ -67,22 +62,81 @@ public class HW_2660_Bowling_Game {
 			 else {
 				 sump2=sump2+player2[p2];
 				 p2++;
-			 }
-				 
+			 }	 
 			 
 		 }
+		 
 		 System.out.println(sump1);
 		 System.out.println(sump2);
 		 
 		 if(sump1>sump2) return 1;
 		 if(sump1<sump2) return 2;
-		 if(sump1==sump1) return 0;
+		 else
+			 	return 0;
 		 
 		 
-		return 0;
+	//	return 0;
 	
 	 }
 }
+//	//7 ms ; tc: o[n]
+//
+//	 public int isWinner(int[] player1, int[] player2) {
+//		 int p1=0,p2=0,sump1=0,sump2=0;
+//		 
+//		 while(p1<player1.length) { //3,5,7,6
+//			 
+//			 if(p1==1 && player1[p1-1]==10) {
+//				 sump1=sump1+player1[p1]*2;
+//				 p1++;
+//			
+//			 }
+//			 else if(p1>=2 && (player1[p1-1]==10 ||player1[p1-2]==10)) {
+//				 sump1=sump1+player1[p1]*2;
+//				 p1++;
+//				 
+//			 }
+//			 else {
+//				 sump1=sump1+player1[p1];
+//				 p1++;
+//			 }
+//			 
+//				 
+//			 
+//		 }
+//		 
+//		 while(p2<player2.length) { //8,10,10,2
+//			 
+//			 if(p2==1 && player2[p2-1]==10) {
+//				 sump2=sump2+player2[p2]*2;
+//				 p2++;
+//			
+//			 }
+//			 else if(p2>=2 && (player2[p2-1]==10 ||player2[p2-2]==10)) {
+//				 sump2=sump2+player2[p2]*2;
+//				 p2++;
+//				 
+//			 }
+//			 else {
+//				 sump2=sump2+player2[p2];
+//				 p2++;
+//			 }
+//				 
+//			 
+//		 }
+//		 System.out.println(sump1);
+//		 System.out.println(sump2);
+//		 
+//		 if(sump1>sump2) return 1;
+//		 if(sump1<sump2) return 2;
+//		 else
+//			 	return 0;
+//		 
+//		 
+	//	return 0;
+	
+//	 }
+//}
 	
 //	 public int isWinner(int[] player1, int[] player2) {
 //		 int p1=0,p2=0,sump1=0,sump2=0;
