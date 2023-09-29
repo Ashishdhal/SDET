@@ -5,11 +5,12 @@ import java.util.Arrays;
 
 //1. find the length of p
 //1.1: Initialize an empty list of lenght s
-//2. static window  startIndex=0, endIndex=2
+//2. Initialize startIndex=0
+//2.1: Iterate using a while loop where sIndex should be less than or equal to s-p
 //3. check if the window contains p,
 //3.1: if present store the first index in list ls
 //3. slide the window till startIndex is less than or equal to length of s-p
-//4. return the array a
+//4. return the list ls
 
 
 import java.util.List;
